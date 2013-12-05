@@ -3,11 +3,9 @@
 , "description": "The Generator Library provides an interface for generating pure pseudo-random
 sequences specified by a seed. This allows for repeatable sequences."
 , "license": "BSD3"
-, "repository": "http://github.com/evancz/rainbow-palette.git"
+, "repository": "https://github.com/jcollard/generator.git"
 , "exposed-modules":
-    [ "Palette.Forest"
-    , "Palette.Rainbow"
-    , "Palette.Slate"
-    , "Palette.Spring"
+    [ "Generator"
+    , "Generator.Standard"
     ]
 }
