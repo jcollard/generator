@@ -7,7 +7,7 @@ an implementation of the Portable Combined Generator of L'Ecuyer for 32-bit
 computers.
 
 # The Standard Generator
-@docs standard
+@docs generator
 
 -}
 
