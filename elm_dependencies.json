@@ -3,7 +3,7 @@
 , "description": "The Generator Library provides an interface for generating pure pseudo-random
 sequences specified by a seed. This allows for repeatable sequences."
 , "license": "BSD3"
-, "repository": "https://github.com/jcollard/generator.git"
+, "repository": "http://github.com/jcollard/generator.git"
 , "exposed-modules":
     [ "Generator"
     , "Generator.Standard"
