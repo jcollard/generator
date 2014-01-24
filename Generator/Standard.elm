@@ -74,4 +74,3 @@ stdSplit (Standard s1 s2 as std) =
 
 stdRange : Standard -> (Int,Int)
 stdRange _ = (0, magicNum8)
-

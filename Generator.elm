@@ -169,4 +169,3 @@ type Generator state = {
   split : state -> (state, state),
   range : state -> (Int,Int)
 }
-            
