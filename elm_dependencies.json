@@ -1,11 +1,12 @@
-{ "version": "0.0"
+{ "version": "0.1"
 , "summary": "random generators"
-, "description": "The Generator Library provides an interface for generating pure pseudo-random
-sequences specified by a seed. This allows for repeatable sequences."
+, "description": "The Generator Library provides an interface for generating pure pseudo-random sequences specified by a seed. This allows for repeatable sequences."
 , "license": "BSD3"
 , "repository": "http://github.com/jcollard/generator.git"
-, "exposed-modules":
-    [ "Generator"
-    , "Generator.Standard"
-    ]
+, "exposed-modules":     [ "Generator"
+                           , "Generator.Standard"
+                         ]
+
+, "elm-version": "0.11"
+, "dependencies":{}
 }
