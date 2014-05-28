@@ -11,7 +11,7 @@ computers.
 
 -}
 
-import open Generator
+import  Generator (..)
 
 
 {-| Given a seed value, creates a standard Generator.
