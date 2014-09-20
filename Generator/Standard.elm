@@ -1,4 +1,4 @@
-module Generator.Standard (generator) where
+module Generator.Standard (generator, Standard) where
 
 {-|
 
