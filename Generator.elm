@@ -83,11 +83,11 @@ int32Range (lo, hi) generator =
               _ -> let (x, state') = generator.next state
                    in  f (n - 1) (x + acc * b) state'
         (v, state') = f n 1 generator.state
-    in  (lo + v `mod` k, { generator | state <- state' })
+    in  (lo + v % k, { generator | state <- state' })
 
 iLogBase : Int -> Int -> Int       
 iLogBase b i =
-    if i < b then 1 else 1 + iLogBase b (i `div` b)
+    if i < b then 1 else 1 + iLogBase b (i // b)
 
 {-| The maximum value for randomly generated for 32-bit ints -}
 maxInt32 : Int

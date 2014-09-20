@@ -1,4 +1,4 @@
-module Generator.Standard (generator) where
+module Generator.Standard (generator, Standard) where
 
 {-|
 
@@ -32,9 +32,9 @@ to produce distinct generator states.
 mkStdGen : Int -> Standard
 mkStdGen s' =
     let s = max s' -s'
-        q  = s `div` (magicNum6-1)
-        s1 = s `mod` (magicNum6-1)
-        s2 = q `mod` (magicNum7-1)
+        q  = s // (magicNum6-1)
+        s1 = s %  (magicNum6-1)
+        s2 = q %  (magicNum7-1)
     in  Standard (s1+1) (s2+1)                         
 
 
@@ -55,10 +55,10 @@ stdNext (Standard s1 s2) =
     -- that in the negative case it rounds up and in the positive case
     -- it rounds down. Thus half the time it rounds up and half the time it
     -- rounds down
-    let k = s1 `div` magicNum1 
+    let k = s1 // magicNum1 
         s1' = magicNum0 * (s1 - k * magicNum1) - k * magicNum2
         s1'' = if s1' < 0 then s1' + magicNum6 else s1' 
-        k' = s2 `div` magicNum3 
+        k' = s2 // magicNum3 
         s2' = magicNum4 * (s2 - k' * magicNum3) - k' * magicNum5
         s2'' = if s2' < 0 then s2' + magicNum7 else s2'
         z = s1'' - s2''
